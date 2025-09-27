@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP Vending Machine</title>
+    <link rel="stylesheet" href="items.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <h1>TP Vending Machine</h1>
+            </div>
+            <div class="right-section">
+                <a class="active" href="./project2.html"><i class="fa-solid fa-house"></i></a>
+                <a class="active" href="./items.html"><i class="fa-solid fa-bowl-food"></i></a>
+                <a class="active" href="./login.html"><i class="fa-solid fa-right-from-bracket"></i></a>
+            </div>
+        </nav>
+    </header>
+    <script src="items.js"></script>
+    <br>
+    <button class="add-button" id="add-button">Add Item</button>
+    <button class="update-button" id="update-button" data-id="someItemId">Update Item</button>
+    <button class="delete-button" id="delete-button" data-id="someItemId">Delete Item</button>
+    <button class="view-item-button" id="view-item-button">View All Items</button>
+</body>
+
+<!-- main content -->
+<main>
+    <div class="container">
+    </div>
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-modal" class="close-button">&times;</span>
+            <h2 id="modal-title"></h2>
+            <form id="modal-form">
+                <div id="form-fields">
+
+                </div>
+                <button type="submit" id="modal-submit">Submit</button>
+                <button type="submit" id="close-modal-button">Close</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+</html>
+
+<!-- Footer -->
+<footer>
+    <p>Contact | Support | Terms</p>
+</footer>

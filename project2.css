@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #a01a7d;
+    padding: 1rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand h1 {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.navbar .right-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.navbar a {
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a:hover {
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 500px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        display: block;
+    }
+
+    .right-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* Available Spaces */
+.available-spaces {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px
+}
+
+.space {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    background-color: pink;
+}
+
+.space h4 {
+    color: #a01a7d;
+    margin-bottom: 8px;
+}
+
+.operational {
+    color: green;
+    font-weight: bold;
+}
+
+.maintenance {
+    color: red;
+    font-weight: bold;
+}
+
+.outofservice {
+    color: black;
+    font-weight: bold;
+}
+
+.available-spaces h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #7b1fa2;
+}
+
+.space-container {
+    display: grid;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.result-card,
+.vending-card {
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+.vending-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.vending-card a:hover {
+    text-decoration: underline;
+}
+
+.result-card h3 {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.result-card p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.loading-spinner {
+    font-size: 1.5rem;
+    color: #555;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.error,
+.no-results {
+    color: #d9534f;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* Search Bar and Filters */
+.search-section {
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+    background-color: pink;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-form {
+    position: relative;
+    display: flex;
+    width: 700px;
+}
+
+.search-form input[type="search"] {
+    width: 100%;
+    padding: 10px 35px 10px 35px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.search-form input[type="search"]::placeholder {
+    color: #bbb
+}
+
+.search-form input[type="search"]:focus {
+    border-color: #1183d6;
+    box-shadow: 0 0 3px #1183d6;
+}
+
+.search-form::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+textarea {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    resize: none;
+}
+
+/* Footer */
+footer {
+    background-color: #7b1fa2;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.space-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.vending-card {
+    background-color: #ffc0cb;
+    padding: 15px;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+}
+
+.vending-card h3 {
+    color: purple;
+    font-size: 18px;
+}
+
+.vending-card p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
